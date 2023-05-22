@@ -38,10 +38,9 @@ if __name__ == '__main__':
     figure = plt.figure( figsize = (6, 6) )
     for i in range(9):
         sample_idx = torch.randint(len(train_dataset), size=(1,)).item()
-        print(sample_idx)
         img, label = train_dataset[sample_idx]
         figure.add_subplot(3, 3, i+1)
-        plt.title(labels_map[label])
+        plt.title(labels_map[label] + f' ({sample_idx})')
         plt.axis("off")
         plt.imshow( img.squeeze() , cmap = 'gray' )
     plt.tight_layout()
