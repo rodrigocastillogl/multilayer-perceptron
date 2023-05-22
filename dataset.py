@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import datasets
+from torchvision.transforms import ToTensor
 import pandas as pd
 import os
 from matplotlib import pyplot as plt
