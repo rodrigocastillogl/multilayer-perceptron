@@ -5,45 +5,19 @@ import pandas as pd
 import os
 from matplotlib import pyplot as plt
 
-def download_fashion_mnist(data_path):
-    """
-    Download Fashion MSNIT data from PyTorch.
-    Input
-    -----
-        data_path: data directory.
-    Output
-    ------
-        None.
-    """
+train_dataset = datasets.FashionMNIST( root  = 'data'  ,
+                                       train = True    ,
+                                       download = True ,
+                                       transform = ToTensor() )
+test_dataset = datasets.FashionMNIST( root  = 'data'  ,
+                                      train = False   ,
+                                      download = True ,
+                                      transform = ToTensor() )
 
-    datasets.FashionMNIST( root  = data_path ,
-                           train = True      ,
-                           download = True   )
-    datasets.FashionMNIST( root  = data_path ,
-                           train = False     ,
-                           download = True   )
+train_data_loader = DataLoader(train_dataset, batch_size = 64, shuffle = True)
+test_data_loader  = DataLoader(test_dataset, batch_size = 64, shuffle = True)
 
-class Dataset_mnist(Dataset):
-    """
-    MNIST Dataset class.
-    """
-
-    def __init__(self, features_path, labels_path):
-        """
-        Constructor
-        Input
-        -----
-            * features_path: features file path.
-            * labels_ path: labels file path.
-        Output
-        ------
-            None
-        """
-
-        # X = 
-        pass
-
-
+    
 labels_map = {
     0: "T-Shirt",
     1: "Trouser",
@@ -59,18 +33,6 @@ labels_map = {
 
 if __name__ == '__main__':
 
-    data_path = 'data'
-
-    if os.path.exists(data_path):
-        print("Data directory already exists.")
-    else:
-
-        # Download data
-        download_fashion_mnist(data_path)
-        
-
-
-    """
     # plot some examples
     figure = plt.figure( figsize = (6, 6) )
     for i in range(9):
@@ -83,4 +45,8 @@ if __name__ == '__main__':
         plt.imshow( img.squeeze() , cmap = 'gray' )
     plt.tight_layout()
     plt.savefig('imgs/examples.png')
-    """
+
+    # Display batch sizes
+    train_features, train_labels = next(iter(train_data_loader))
+    print( f'Features batch shape: {train_features.size()}' )
+    print( f'Features batch shape: {train_labels.size()}' )
