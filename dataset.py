@@ -37,9 +37,9 @@ if __name__ == '__main__':
     # plot some examples
     figure = plt.figure( figsize = (6, 6) )
     for i in range(9):
-        sample_idx = torch.randint(len(training_data), size=(1,)).item()
+        sample_idx = torch.randint(len(train_dataset), size=(1,)).item()
         print(sample_idx)
-        img, label = training_data[sample_idx]
+        img, label = train_dataset[sample_idx]
         figure.add_subplot(3, 3, i+1)
         plt.title(labels_map[label])
         plt.axis("off")
