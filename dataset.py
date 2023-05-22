@@ -1,25 +1,47 @@
 import torch
-import os
 from torch.utils.data import Dataset, DataLoader
+from torchvision import datasets
+import pandas as pd
+import os
 from matplotlib import pyplot as plt
-import wget
-import zipfile
 
-def load_data(data_url, data_path):
+def download_fashion_mnist(data_path):
     """
-    Download data set.
+    Download Fashion MSNIT data from PyTorch.
     Input
     -----
-        * data_url  : url to download data.
-        * data_path : data directory path.
+        data_path: data directory.
     Output
-    -----
-        * None
+    ------
+        None.
     """
 
-    print(f'Downloading data from: {data_url}')
-    filename= wget.download(data_url, data_path)
-    print(f'Saved as {data_path + filename }')
+    datasets.FashionMNIST( root  = data_path ,
+                           train = True      ,
+                           download = True   )
+    datasets.FashionMNIST( root  = data_path ,
+                           train = False     ,
+                           download = True   )
+
+class Dataset_mnist(Dataset):
+    """
+    MNIST Dataset class.
+    """
+
+    def __init__(self, features_path, labels_path):
+        """
+        Constructor
+        Input
+        -----
+            * features_path: features file path.
+            * labels_ path: labels file path.
+        Output
+        ------
+            None
+        """
+
+        # X = 
+        pass
 
 
 labels_map = {
@@ -37,19 +59,15 @@ labels_map = {
 
 if __name__ == '__main__':
 
-    data_url = 'https://www.kaggle.com/datasets/zalando-research/fashionmnist/download?datasetVersionNumber=4'
     data_path = 'data'
 
     if os.path.exists(data_path):
-        print('Data already exists.')
-    
+        print("Data directory already exists.")
     else:
-        
-        # Create data directory
-        os.makedirs(data_path)
-        
+
         # Download data
-        load_data(data_url, data_path)
+        download_fashion_mnist(data_path)
+        
 
 
     """
