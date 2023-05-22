@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset
 from torchvision import datasets
-from matplotlib import pyplor as plt
+from matplotlib import pyplot as plt
 
 
 training_data = datasets.FashionMNIST(
