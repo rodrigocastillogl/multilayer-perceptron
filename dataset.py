@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import Dataset
 from torchvision import datasets
+from torchvision.transforms import ToTensor
 from matplotlib import pyplot as plt
 
 
@@ -42,6 +43,6 @@ if __name__ == '__main__':
         figure.add_subplot(3, 3, i+1)
         plt.title(labels_map[label])
         plt.axis("off")
-        plt.imshow( img , cmap = 'gray' )
+        plt.imshow( img.squeeze() , cmap = 'gray' )
     plt.tight_layout()
-    #plt.savefig('imgs/examples.png')
+    plt.savefig('imgs/examples.png')
