@@ -3,6 +3,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from mlp import MLP
 from dataset import train_dataset, train_data_loader
+from test import test
 
 def train(model, dataloader, n_epochs, use_cuda = False):
     """
@@ -78,3 +79,7 @@ if __name__ == '__main__':
     weights_path = "weights.pth"
     torch.save(model.state_dict(), weights_path )
     print(f"Saved model weights to {weights_path}")
+
+    # test on training data
+    train_acc, train_loss = test(model, train_data_loader, use_cuda)
+    print(f"Train Error: \n Accuracy: {(100*train_acc):0.2f}%, Average loss: {train_loss:0.5f}")
