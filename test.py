@@ -44,11 +44,13 @@ if __name__ == '__main__':
                  num_outputs = 10  ,
                  lr = 5e-4         )
     # load weights
-    model.load_state_dict(torch.load("model.pth"))
+    weights_path = "weights.pth"
+    model.load_state_dict(torch.load(weights_path))
 
     use_cuda = torch.cuda.is_available()
     if use_cuda:
         model.cuda()
     
+    # Test model
     test_acc, test_loss = test(model, test_data_loader, use_cuda)
     print(f"Test Error: \n Accuracy: {(100*test_acc):0.2f}%, Average loss: {test_loss:0.5f}")
