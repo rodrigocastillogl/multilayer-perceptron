@@ -61,7 +61,7 @@ if __name__ == '__main__':
         model.cuda()
     
     # Train model
-    epochs = 15
+    epochs = 20
     losses = train(model, train_data_loader, epochs, use_cuda = use_cuda)
 
     # Save training image
@@ -73,3 +73,8 @@ if __name__ == '__main__':
     plt.grid()
     plt.tight_layout()
     plt.savefig('training.png')
+
+    # saving model
+    weights_path = "weights.pth"
+    torch.save(model.state_dict(), weights_path )
+    print(f"Saved model weights to {weights_path}")
