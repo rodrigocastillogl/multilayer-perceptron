@@ -73,12 +73,12 @@ if __name__ == '__main__':
     plt.ylabel('Loss')
     plt.grid()
     plt.tight_layout()
-    plt.savefig('training.png')
+    plt.savefig('imgs/training.png')
 
     # saving model
     weights_path = "weights.pth"
     torch.save(model.state_dict(), weights_path )
-    print(f"Saved model weights to {weights_path}")
+    print(f"Saved model weights as {weights_path}")
 
     # test on training data
     train_acc, train_loss = test(model, train_data_loader, use_cuda)
