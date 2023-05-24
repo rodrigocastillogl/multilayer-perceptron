@@ -66,7 +66,8 @@ if __name__ == '__main__':
 
     # Save training image
     plt.figure( figsize = (6,4) )
-    plt.plot( list(range(1, epochs+1)), losses, marker = 'o', c = 'forestgreen' )plt.title('Training loss')
+    plt.plot( list(range(1, epochs+1)), losses, marker = 'o', c = 'forestgreen' )
+    plt.title('Training loss')
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
     plt.grid()
