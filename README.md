@@ -9,9 +9,9 @@ A Multilayer Perceptron (MLP) is one of the simplest deep models. It consists of
 * Hidden layers: that compute over the input features; it is important to introduce non-linearlity in these layers, this way the model works as "universal function approximator" .
 * Output layer: output of the model.
 
-The following figure shows the model (from: [(Neurons in Neural Networks, by Nikhil Bhargav)]https://www.baeldung.com/cs/neural-networks-neurons() ).
+The following figure shows the model (from: [(Neurons in Neural Networks, by Nikhil Bhargav)](https://www.baeldung.com/cs/neural-networks-neurons).
 
-<img src="/imgs/mlp.png" alt="Multi-layer Perceptron" width="50%" height="50%">
+<img src="/imgs/mlp.png" alt="Multi-layer Perceptron" width="70%" height="70%">
 
 # Forward Propagation
 
