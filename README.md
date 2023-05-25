@@ -24,13 +24,6 @@ Let $\bf{x}$ de the input variable, ${\bf{W}}^{(i)}$ and ${\bf{b}}^{(i)}$ the we
 $\sigma^{(i)}$ the activation function of the $i$-th layer, ${\bf{h}}^{(i)}$ the output of the $i$-th hidden layer and $\bf{o}$ the output of the model. Then, forward propagation
 is computed as follows:
 
-* ${\bf{h}}^{(1)} = \sigma^{(1)} ( {\bf{W}}^{(1)} \bf{x} + {\bf{b}}^{(1)} )$
-* ${\bf{h}}^{(2)} = \sigma^{(2)} ( {\bf{W}}^{(2)} {\bf{h}}^{(1)} + {\bf{b}}^{(2)} )$
-* $\ \ \ \vdots$
-* ${\bf{h}}^{(L-1)} = \sigma^{(L-1)} ( {\bf{W}}^{(L-1)} {\bf{h}}^{(L-2)} + {\bf{b}}^{(L-1)} )$
-* $\bf{o} = {\bf{W}}^{(L)} {\bf{h}}^{(L-1)} + {\bf{b}}^{(L)}$
-
-
 $$\begin{matrix}
 {\bf{h}}^{(1)} = &  \sigma^{(1)} ( \ {\bf{W}}^{(1)} \bf{x} + {\bf{b}}^{(1)} \ ) \\
 {\bf{h}}^{(2)} = & \sigma^{(2)} ( \ {\bf{W}}^{(2)} {\bf{h}}^{(1)} + {\bf{b}}^{(2)} \ ) \\
