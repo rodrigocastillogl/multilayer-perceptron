@@ -14,7 +14,7 @@ The following figure shows the model (from: [(Neurons in Neural Networks, by Nik
 
 <img src="/imgs/mlp.png" alt="Multi-layer Perceptron" width="70%" height="70%">
 
-We can refer to this kind of architecture as *fully conected layers* because the output of every neuron in a layer is conected to every neuron in the following layer.
+We can refer to this kind of architecture as *fully connected layers* because the output of every neuron in a layer is connected to every neuron in the following layer.
 
 # Forward Propagation
 
@@ -71,7 +71,7 @@ Its derivative can be expressed as
 
 $$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{sigmoid}(x) = 1 - {\mathrm{tanh}}^2(x)$$
 
-Also, when the input diverges from $0$ in either direction, the derivative approaches $0$.
+Also, when the input diverges from $0$ in either direction, the derivative of the Tanh function approaches $0$.
 
 
 ## Fashion-MNISt classification
