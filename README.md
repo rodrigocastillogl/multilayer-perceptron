@@ -30,6 +30,15 @@ is computed as follows:
 * ${\bf{h}}^{(L-1)} = \sigma^{(L-1)} ( {\bf{W}}^{(L-1)} {\bf{h}}^{(L-2)} + {\bf{b}}^{(L-1)} )$
 * $\bf{o} = {\bf{W}}^{(L)} {\bf{h}}^{(L-1)} + {\bf{b}}^{(L)}$
 
+
+$$\begin{matrix}
+{\bf{h}}^{(1)} & = \sigma^{(1)} ( {\bf{W}}^{(1)} \bf{x} + {\bf{b}}^{(1)} ) \\
+{\bf{h}}^{(2)} & = \sigma^{(2)} ( {\bf{W}}^{(2)} {\bf{h}}^{(1)} + {\bf{b}}^{(2)} ) \\
+\ \ \ \vdots$ & = \ \ \ \vdots \\
+{\bf{h}}^{(L-1)} & = \sigma^{(L-1)} ( {\bf{W}}^{(L-1)} {\bf{h}}^{(L-2)} + {\bf{b}}^{(L-1)} ) \\
+\bf{o} & = {\bf{W}}^{(L)} {\bf{h}}^{(L-1)} + {\bf{b}}^{(L)} \\
+\end{matrix}$$
+
 ## Fashion-MNISt classification
 
 Describe example
