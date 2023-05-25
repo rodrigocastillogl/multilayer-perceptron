@@ -1,7 +1,5 @@
 # Multilayer Perceptron
 
-> by: Rodrigo Castillo González
-
 ## Multilayer Perceptron
 
 A *Multilayer Perceptron* (MLP) is one of the simplest deep models. It consists of:
