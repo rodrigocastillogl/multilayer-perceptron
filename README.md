@@ -32,6 +32,48 @@ $$\begin{matrix}
 \bf{o} & = & {\bf{W}}^{(L)} {\bf{h}}^{(L-1)} + {\bf{b}}^{(L)} \\
 \end{matrix}$$
 
+
+## Activation Functions
+
+Some activation functions are:
+
+* *Rectified Linear function* (ReLU):
+
+Defined as
+$$\mathrm{ReLU}(x) = \max{(0, x)}$$
+
+It retains only positive values, and discard all negavite values their activations to $0$. For positive arguments the derivative of the ReLU
+function is $1$ and for negative arguments it is $0$. Although it is not differentiable when $x=0$, by default we use the left-hand-side derivative
+and say that the derivative is $0$ when $x=0$.
+
+There exists some variations of this function: *Leaky ReLU*, *parameterized ReLU* (pReLU) and some others.
+
+* *Sigmoid function*:
+
+Defined as
+$$\mathrm{sigmoid}(x) = \frac{ 1 }{ 1+\mathrm{exp}(-x) }$$
+
+It squashes any input in $\mathbb{R}$ to some value in the range $[0,1]$ Its derivative can be expressed as
+
+$$\mathrm{d}/\mathrm{d}x \ \mathrm{sigmoid}(x) = \mathrm{sigmoid}(x) \left( 1 - \mathrm{sigmoid}(x) \right)$$
+
+When the input diverges from $0$ in either direction, the derivative approaches $0$, and this can lead to a vanishing gradient problem.
+
+* *Tanh function*:
+
+It is the *hyperbolic tangent function*, and it is defined as
+
+$$\mathrm{tanh}(x) = \frac{ 1 - \mathrm{exp}(-2x) }{ 1 + \mathrm{exp}(-2x) }$$
+
+Similar to sigmoid function, it squashes any input in $\mathbb{R}$ to some value in the range $[-1,1]$.
+
+Its derivative can be expressed as
+
+$$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{sigmoid}(x) = 1 - {\mathrm{tanh}}^2(x)$$
+
+Also, when the input diverges from $0$ in either direction, the derivative approaches $0$.
+
+
 ## Fashion-MNISt classification
 
 Describe example
