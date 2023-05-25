@@ -53,7 +53,7 @@ $$\mathrm{sigmoid}(x) = \frac{ 1 }{ 1+\mathrm{exp}(-x) }$$
 
 It squashes any input in $\mathbb{R}$ to some value in the range $[0,1]$ Its derivative can be expressed as
 
-$$\mathrm{d}/\mathrm{d}x \ \mathrm{sigmoid}(x) = \mathrm{sigmoid}(x) \left( 1 - \mathrm{sigmoid}(x) \right)$$
+$$\frac{\mathrm{d}}{\mathrm{d}x} \ \mathrm{sigmoid}(x) = \mathrm{sigmoid}(x) \left( 1 - \mathrm{sigmoid}(x) \right)$$
 
 When the input diverges from $0$ in either direction, the derivative approaches $0$, and this can lead to a vanishing gradient problem.
 
@@ -71,6 +71,9 @@ $$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{sigmoid}(x) = 1 - {\mathrm{tanh}}^2(
 
 Also, when the input diverges from $0$ in either direction, the derivative of the Tanh function approaches $0$.
 
+## Back Propagation
+
+*Back propagation* 
 
 ## Fashion-MNISt classification
 
