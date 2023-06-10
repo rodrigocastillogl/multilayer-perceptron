@@ -8,7 +8,7 @@ A *Multilayer Perceptron* (MLP) is one of the simplest deep models. It consists 
 this way the model works as "universal function approximator" .
 * Output layer: output of the model.
 
-The following figure shows the model (from: [(Neurons in Neural Networks, by Nikhil Bhargav)](https://www.baeldung.com/cs/neural-networks-neurons).
+The following Figure (from: [Neurons in Neural Networks, by Nikhil Bhargav](https://www.baeldung.com/cs/neural-networks-neurons)) shows the model.
 
 <img src="/imgs/mlp.png" alt="Multi-layer Perceptron" width="70%" height="70%">
 
@@ -67,13 +67,15 @@ Similar to sigmoid function, it squashes any input in $\mathbb{R}$ to some value
 
 Its derivative can be expressed as
 
-$$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{sigmoid}(x) = 1 - {\mathrm{tanh}}^2(x)$$
+$$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{tanh}(x) = 1 - {\mathrm{tanh}}^2(x)$$
 
 Also, when the input diverges from $0$ in either direction, the derivative of the Tanh function approaches $0$.
 
 ## Back Propagation
 
-*Back propagation* 
+*Back propagation*
+
+*Automatic differentiation* and *computational graphs* profoundly simplifies the implementation of deep model.
 
 ## Fashion-MNISt classification
 
