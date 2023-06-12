@@ -75,7 +75,8 @@ Also, when the input diverges from $0$ in either direction, the derivative of th
 
 The training of a MLP requires a loss function $L({\bf{o}}, {\bf{y}})$ to minimize. This function is defined over
 the output of the model and the available data, and to minimize it we use a gradient descent method that requires
-to compute the gradient of the loss with respect to the parameters of the model ({\bf{W}}^{(1)}, {\bf{W}}^{(2)}, ...).
+to compute the gradient of the loss with respect to the parameters of the model (${\bf{W}}^{(1)}$, ${\bf{W}}^{(2)}$,
+ ...).
 
 *Back propagation* refers to the method of calculating the gradient of the neural network parameters. This methods
 traverses the network in reverse order (from the output to the input layer) according to the *cahain rule* of calculus.
