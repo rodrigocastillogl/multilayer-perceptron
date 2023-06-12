@@ -73,7 +73,22 @@ Also, when the input diverges from $0$ in either direction, the derivative of th
 
 ## Back Propagation
 
-*Back propagation*
+The training of a MLP requires a loss function $L({\bf{o}}, {\bf{y}})$ to minimize. This function is defined over
+the output of the model and the available data, and to minimize it we use a gradient descent method that requires
+to compute the gradient of the loss with respect to the parameters of the model ({\bf{W}}^{(1)}, {\bf{W}}^{(2)}, ...).
+
+*Back propagation* refers to the method of calculating the gradient of the neural network parameters. This methods
+traverses the network in reverse order (from the output to the input layer) according to the *cahain rule* of calculus.
+
+Let $\mathtt{Y} = f(\mathtt{X})$ and $\mathtt{Z} = g(\mathtt{Y})$, where $\mathtt{X}$, $\mathtt{Y}$ and $\mathtt{Z}$ 
+are tensors. Then, 
+
+$$\frac{\partial \mathtt{Z}}{\partial \mathtt{X}} = \mathrm{prod} \left( \frac{\partial \mathtt{Z}}{\partial \mathtt{Y}}, \frac{\partial \mathtt{Y}}{\partial \mathtt{X}}\right)$$.
+
+Since we are dealing with tensors of arbitrary (but consistent) shape, here the $\mathrm{prod}(.)$ operator is a multuplication
+after the nessesary operation (transposition, swapping position, etc.).
+
+## Computational graphs
 
 *Automatic differentiation* and *computational graphs* profoundly simplifies the implementation of deep model.
 
