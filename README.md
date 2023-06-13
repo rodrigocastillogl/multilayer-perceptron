@@ -14,7 +14,9 @@ The following Figure (from: [Neurons in Neural Networks, by Nikhil Bhargav](http
 
 We can refer to this kind of architecture as *fully connected layers* because the output of every neuron in a layer is connected to every neuron in the following layer.
 
-# Forward Propagation
+## Model Evaluation
+
+### Forward Propagation
 
 *Forward propagation* or *forward pass* refers to the computation and storage of intermediate variables for a neural network in order from the input layer to the output layer.
 
@@ -30,8 +32,7 @@ $$\begin{matrix}
 \bf{o} & = & {\bf{W}}^{(L)} {\bf{h}}^{(L-1)} + {\bf{b}}^{(L)} \\
 \end{matrix}$$
 
-
-## Activation Functions
+### Activation Functions
 
 Some activation functions are:
 
@@ -71,7 +72,27 @@ $$\frac{ \mathrm{d}}{\mathrm{d}x} \ \mathrm{tanh}(x) = 1 - {\mathrm{tanh}}^2(x)$
 
 Also, when the input diverges from $0$ in either direction, the derivative of the Tanh function approaches $0$.
 
-## Back Propagation
+## Model Training
+
+During training, the model is fitted to a set of data (refered as training data). Model parameters are updated
+in order to minimize some loss function, usually we do this with a *Gradient descent* method (the basic optimization
+algortihm is *Stoochastic Gradient Descent* or SGD). 
+
+### Loss function
+
+Fitting our model to the training data requires that we define some measure of fitness (or unfitness). Loss functions
+quantify the distance between the real and predicted values of the target. The loss will usually be a non-negative number
+where smaller values reflect better predictions.
+
+For regression problems, the most common loss function is *Mean Squared Error* (MSE). Let ${\bf \hat{y}}^{(i)}$ be the value predicted by the
+model and let ${\bf y}^{(i)}$ the corresponding true label for an observation ${\bf x}^{(i)}$, the squared error is given by
+$l^{(i)} \left( {\bf \theta} \right) = 1/2 \left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)$. The, the MSE is given by
+
+$$L \left({\bf \theta} \right) = \frac{1}{n} \sum_{i=1}^{n} l^{(i)} \left( {\bf \theta} \right) = \frac{1}{2} \frac{1}{n} \sum_{i=1}^{n} \left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)$$
+
+For classification tasks the ** Cross Entropy Loss* is usually used. 
+
+### Back Propagation
 
 The training of a MLP requires a loss function $L({\bf{o}}, {\bf{y}})$ to minimize. This function is defined over
 the output of the model and the available data, and to minimize it we use a gradient descent method that requires
