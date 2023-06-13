@@ -88,9 +88,11 @@ For regression problems, the most common loss function is *Mean Squared Error* (
 model and let ${\bf y}^{(i)}$ the corresponding true target for an observation ${\bf x}^{(i)}$, the squared error is given by
 $l^{(i)} \left( {\bf \theta} \right) = 1/2 {\left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)}^2$. The, the MSE is given by
 
-$$L \left({\bf \theta} \right) = \frac{1}{n} \sum_{i=1}^{n} l^{(i)} \left( {\bf \theta} \right) =  \frac{1}{n} \sum_{i=1}^{n} \frac{1}{2} {\left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)}^2$$
+$$L \left( \boldsymbol{\theta} \right) = \frac{1}{n} \sum_{i=1}^{n} l^{(i)} \left( {\bf \theta} \right) =  \frac{1}{n} \sum_{i=1}^{n} \frac{1}{2} {\left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)}^2$$
 
-For classification tasks the ** Cross Entropy Loss* is usually used. 
+Where ${\bf \theta}$ represent the model parameters and $n$ is the size of the batch.
+
+For classification tasks the *Cross Entropy Loss* is usually used. 
 
 ### Back Propagation
 
