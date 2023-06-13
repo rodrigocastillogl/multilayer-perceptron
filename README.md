@@ -85,7 +85,7 @@ quantify the distance between the real and predicted values of the target. The l
 where smaller values reflect better predictions.
 
 For regression problems, the most common loss function is *Mean Squared Error* (MSE). Let ${\bf \hat{y}}^{(i)}$ be the value predicted by the
-model and let ${\bf y}^{(i)}$ the corresponding true label for an observation ${\bf x}^{(i)}$, the squared error is given by
+model and let ${\bf y}^{(i)}$ the corresponding true target for an observation ${\bf x}^{(i)}$, the squared error is given by
 $l^{(i)} \left( {\bf \theta} \right) = 1/2 \left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)$. The, the MSE is given by
 
 $$L \left({\bf \theta} \right) = \frac{1}{n} \sum_{i=1}^{n} l^{(i)} \left( {\bf \theta} \right) = \frac{1}{2} \frac{1}{n} \sum_{i=1}^{n} \left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)$$
