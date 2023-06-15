@@ -90,7 +90,7 @@ $l^{(i)} \left( \boldsymbol{\theta} \right) = 1/2 {\left( {\bf y}^{(i)} - {\bf \
 
 $$L \left( \boldsymbol{\theta} \right) = \frac{1}{n} \sum_{i=1}^{n} l^{(i)} \left( \boldsymbol{\theta} \right) =  \frac{1}{n} \sum_{i=1}^{n} \frac{1}{2} {\left( {\bf y}^{(i)} - {\bf \hat{y}}^{(i)} \right)}^2$$
 
-Where ${\bf \theta}$ represent the model parameters and $n$ is the size of the batch.
+Where $\left( \boldsymbol{\theta} \right)$ represent the model parameters and $n$ is the size of the batch.
 
 For classification tasks the *Cross Entropy Loss* is usually used. 
 
